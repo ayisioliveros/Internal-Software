@@ -1,0 +1,5 @@
+﻿Enable-Migrations -ContextTypeName PTMContex -MigrationsDirectory Migrations\PTM
+
+add-migration -ConfigurationTypeName TrackerModuleV1._0.Migrations.PTM.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName TrackerModuleV1._0.Migrations.PTM.Configuration

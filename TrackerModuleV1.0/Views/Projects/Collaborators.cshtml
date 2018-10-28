@@ -1,0 +1,30 @@
+﻿@model TrackerModuleV1._0.Models.PTM.Project
+
+@{
+    ViewBag.Title = "Collaborators";
+}
+
+<h2>Collaborators</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProjectName)
+        </dd>
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>*@
+
+    </dl>
+</div>

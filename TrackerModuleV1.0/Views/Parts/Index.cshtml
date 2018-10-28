@@ -1,0 +1,173 @@
+﻿@model IEnumerable<TrackerModuleV1._0.Models.PTM.Part>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@*@using (Html.BeginForm())*@
+@*@using (Html.BeginForm("Index", "Parts", FormMethod.Get))
+    {
+
+        <table class="table">
+            <tr>
+
+                Status: @Html.DropDownList("status", "-Select-")
+
+                &nbsp;&nbsp;
+                Part Name: @Html.TextBox("partName")
+
+                &nbsp;&nbsp;
+                <input type="submit" value="Filter" />
+
+            </tr>
+        </table>
+    }*@
+
+@*@using (Html.BeginForm("Index", "Parts", FormMethod.Get))
+    {
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-2">
+                Search
+            </div>
+            <div class="col-md-10">
+                @Html.TextBox("search", null, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-6">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+    }*@
+
+@*Current Code*@
+@using (Html.BeginForm("Index", "Parts", FormMethod.Get))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-2">
+                Status
+            </div>
+            <div class="col-md-10">
+                @Html.DropDownList("status", null, "-Select Status-", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2">
+                Part Name
+            </div>
+            <div class="col-md-10">
+                @Html.TextBox("partName", null, new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <input type="submit" value="Filter" class="btn btn-default" />
+            </div>
+        </div>
+        @*<div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <input type="reset" value="Clear All" class="btn btn-default" />
+            </div>
+        </div>*@
+    </div>
+}
+
+@*@using (Html.BeginForm("Index", "Parts", FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <input type="reset" value="Clear All" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}*@
+
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PartName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PartDescription)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NovenaTecPartNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SwissRanksPartNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OEMPartNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorPartNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StockQuantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PartName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PartDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NovenaTecPartNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SwissRanksPartNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OEMPartNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VendorPartNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StockQuantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PartId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.PartId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.PartId })
+                    </td>
+                </tr>
+            }
+
+        </table>

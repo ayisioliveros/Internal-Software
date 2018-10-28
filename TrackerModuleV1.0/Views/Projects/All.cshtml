@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TrackerModuleV1._0.Models.PTM.Project>
+
+@{
+    ViewBag.Title = "All";
+}
+
+<h2>View All</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Project Id")
+        </th>
+        <th>
+            @Html.DisplayName("Project Name")
+        <th>
+            @Html.DisplayName("Short Description")
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShortDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProjectId })|
+            @Html.ActionLink("Collaborators", "Delete", new { id = item.ProjectId })
+        </td>
+    </tr>
+}
+
+</table>

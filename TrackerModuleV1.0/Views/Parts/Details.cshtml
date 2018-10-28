@@ -1,0 +1,90 @@
+﻿@model TrackerModuleV1._0.Models.PTM.Part
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Part</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NovenaTecPartNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NovenaTecPartNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SwissRanksPartNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SwissRanksPartNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OEMPartNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OEMPartNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorPartNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VendorPartNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StockQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StockQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PartId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
