@@ -173,6 +173,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PartsController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\Users2Controller.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\DummyData.cs" />
     <Compile Include="Data\PTMContex.cs" />
@@ -272,6 +273,11 @@
     </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\inventory3.png" />
+    <Content Include="Content\images\parts4.png" />
+    <Content Include="Content\images\projects3.png" />
+    <Content Include="Content\images\suppliers3.png" />
+    <Content Include="Content\images\users4.png" />
     <Content Include="Docs\Migrations.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -345,6 +351,10 @@
     <Content Include="Views\Parts\Details.cshtml" />
     <Content Include="Views\Parts\Edit.cshtml" />
     <Content Include="Views\Parts\Index.cshtml" />
+    <Content Include="Views\Users2\Index.cshtml" />
+    <Content Include="Views\Users2\Register.cshtml" />
+    <Content Include="Views\Users2\Login.cshtml" />
+    <Content Include="Views\Users2\LoggedIn.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
